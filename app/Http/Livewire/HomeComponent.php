@@ -2,11 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Category;
+use App\Models\HomeCategory;
 use Livewire\Component;
 use App\Models\HomeCategory ;
 use App\Models\HomeSlider;
 use App\Models\Product;
-use App\Models\Category;
+
+
 
 class HomeComponent extends Component
 {

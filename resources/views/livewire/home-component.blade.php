@@ -1,7 +1,6 @@
 <div>
     <main id="main">
 		<div class="container">
-
 			<!--MAIN SLIDE-->
 			<div class="wrap-main-slide">
 				<div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
@@ -85,11 +84,14 @@
 												</a>
 											</div>
 											<div class="product-info">
+
 												<a href="{{route('product.details', ['slug'=>$lproduct->slug])}}" class="product-name"><span>{{$lproduct->name}}</span></a>
 												<div class="wrap-price"><span class="product-price">${{$lproduct->regular_price}}</span></div>
 											</div>
 										</div>
 									@endforeach
+
+
 								</div>
 							</div>							
 						</div>
@@ -139,8 +141,6 @@
 					</div>
 				</div>
 			</div>			
-
 		</div>
-
 	</main>
 </div>
