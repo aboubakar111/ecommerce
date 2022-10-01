@@ -9,6 +9,6 @@ class HomeCategory extends Model
 {
     use HasFactory;
 
-    protected $table="home_categories";
-    
+    protected $table = "home_categories";
+
 }
