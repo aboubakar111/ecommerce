@@ -31,7 +31,6 @@
                                     <th>Name</th>
                                     <th>Stock</th>
                                     <th>Price</th>
-                                    <th>Sale Price</th>
                                     <th>Category</th>
                                     <th>Date</th>
                                     <th>Action</th>
@@ -44,8 +43,7 @@
                                         <td><img src="{{asset('assets/images/products')}}/{{$product->image}}" width="60"/></td>
                                         <td>{{$product->name}}</td>
                                         <td>{{$product->stock_status}}</td>     
-                                        <td>{{$product->regular_price}}</td>    
-                                        <td>{{$product->sale_price}}</td>
+                                        <td>{{$product->regular_price}}</td>
                                         <!-- (Problem one sloved) ?-> access nullsafe property access-->
                                         <td>{{$product->category?->name}}</td>
                                         <td>{{$product->created_at}}</td>
