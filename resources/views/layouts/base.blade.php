@@ -98,6 +98,9 @@
 													<a title="Sale Setting" href="{{route('admin.sale')}}">Sale Setting</a>
 												</li>
 												<li class="menu-item">
+													<a title="All Coupon" href="{{route('admin.coupons')}}">All Coupon</a>
+												</li>
+												<li class="menu-item">
 													<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 												</li>
 												<form id="logout-form" method="POST" action="{{ route('logout') }}">
@@ -144,26 +147,10 @@
 						@livewire('header-search-component')
 
 						<div class="wrap-icon right-section">
-							<div class="wrap-icon-section wishlist">
-								<a href="#" class="link-direction">
-									<i class="fa fa-heart" aria-hidden="true"></i>
-									<div class="left-info">
-										<span class="index">0 item</span>
-										<span class="title">Wishlist</span>
-									</div>
-								</a>
-							</div>
-							<div class="wrap-icon-section minicart">
-								<a href="#" class="link-direction">
-									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-									<div class="left-info">
-										@if (Cart::count() > 0 )
-											<span class="index">{{ Cart:: count() }} items</span>
-										@endif
-										<span class="title">CART</span>
-									</div>
-								</a>
-							</div>
+							@livewire('wishlist-count-component')
+
+							@livewire('cart-count-component')
+							
 							<div class="wrap-icon-section show-up-after-1024">
 								<a href="#" class="mobile-navigation">
 									<span></span>
@@ -489,7 +476,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js" integrity="sha512-1mDhG//LAjM3pLXCJyaA+4c+h5qmMoTc7IuJyuNNPaakrWT9rVTxICK4tIizf7YwJsXgDC2JP74PGCc7qxLAHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	
+	<script src="https://cdn.tiny.cloud/1/mgnvscc8vrnvyf2vhj4zgt3xfiux8ut6y85ldlgiiiy00d0q/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     @livewireScripts
 
 	@stack('scripts')
